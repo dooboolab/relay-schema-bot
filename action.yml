@@ -1,0 +1,27 @@
+name: 'Generate Relay schema files'
+description: 'Automatically generate Relay schema when the server graphQL schema changes.'
+author: 'dooboolab'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+inputs:
+  token:
+    description: 'Github Personal Access Token (PAT)'
+    required: true
+  repo-url:
+    description: 'Github repository URL'
+    required: true
+  title:
+    description: Title of the pull request
+    default: 'Generate relay schema files'
+  description:
+    description: description of the pull request
+  base:
+    description: The pull request base branch.
+    default: 'master'
+  app-id:
+    description: Github relay-schema-bot app id
+    required: true
+  app-private-key:
+    description: Github relay-schema-bot private key
+    required: true

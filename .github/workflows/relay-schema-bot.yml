@@ -1,0 +1,15 @@
+name: Relay Schema bot
+
+# on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Jay-flow/relay-schema-bot@master
+        with:
+          token: ${{ secrets.PAT }}
+          repo-url: https://github.com/Jay-flow/artifacts-pro
+
+          app-id: ${{ secrets.APP_ID }}
+          app-private-key: ${{ secrets.APP_PRIVATE_KEY }}

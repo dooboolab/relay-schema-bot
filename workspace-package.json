@@ -1,0 +1,13 @@
+{
+  "scripts" :{
+    "generate": "npm run schema && npm run codegen",
+    "schema": "get-graphql-schema https://research-apollo.azurewebsites.net/graphql > schema.graphql",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "devDependencies": {
+    "get-graphql-schema": "^2.1.2",
+    "@graphql-codegen/cli": "^2.3.0",
+    "@graphql-codegen/typescript-operations": "^2.2.0",
+    "@graphql-codegen/typescript-react-apollo": "^3.2.1"
+  }
+}
